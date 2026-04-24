@@ -1,6 +1,21 @@
-let params = new URLSearchParams(window.location.search);
-let livro = params.get("livro");
+const params = new URLSearchParams(window.location.search);
 
-let viewer = document.getElementById("pdfViewer");
+const livro = params.get("livro");
 
-viewer.src = "livros/" + livro;
+const viewer = document.getElementById("pdfViewer");
+
+if(livro){
+
+const arquivo = encodeURIComponent(livro);
+
+const urlBase =
+window.location.origin +
+window.location.pathname.replace("leitor.html","");
+
+viewer.src =
+"https://mozilla.github.io/pdf.js/web/viewer.html?file=" +
+urlBase +
+"livros/" +
+arquivo;
+
+}
