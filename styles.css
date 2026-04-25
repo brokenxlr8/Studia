@@ -424,11 +424,13 @@ button{
         top: 25%;
         left: 5%;
         width: 90%;
+        height: 40px;
+        border-radius: 40px; 
     }
     .option {
         position: absolute;
         background-color: #fff;
-        top: 25%;
+        top: 26%;
         margin-top: 4px;
         left: 69%; 
         width: 25%;
